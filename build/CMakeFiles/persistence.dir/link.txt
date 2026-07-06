@@ -1,0 +1,2 @@
+/usr/bin/ar qc libpersistence.a CMakeFiles/persistence.dir/persistence/src/GeoJSONImporter.cpp.o CMakeFiles/persistence.dir/persistence/src/GeoJSONParser.cpp.o CMakeFiles/persistence.dir/persistence/src/GraphBuilder.cpp.o CMakeFiles/persistence.dir/persistence/src/RoadFeatureExtractor.cpp.o CMakeFiles/persistence.dir/persistence/src/JsonGraphSerializer.cpp.o
+/usr/bin/ranlib libpersistence.a

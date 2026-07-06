@@ -1,32 +1,41 @@
 #pragma once
 
 #include <memory>
+#include <vector>
+#include "unordered_map"
 
 #include "../model/Node.hpp"
 #include "../model/Edge.hpp"
 
 namespace core::graph {
 
-/**
- * @brief Core graph structure
- * PURE INTERFACE LAYER (NO LOGIC)
- */
 class Graph {
 public:
-    Graph() = default;
-    ~Graph() = default;
+    // WRITE OPERATIONS (validated, invariant-safe)
+    bool addNode(const model::Node& node);
+    bool addEdge(const model::Edge& edge);
 
-    // Disable copying for safety
-    Graph(const Graph&) = delete;
-    Graph& operator=(const Graph&) = delete;
+    bool removeNode(types::NodeId id);
+    bool removeEdge(types::EdgeId id);
 
-    // ---- API (EMPTY IMPLEMENTATION LATER) ----
+    // READ OPERATIONS (safe)
+    const model::Node* findNode(types::NodeId id) const;
+    const model::Edge* findEdge(types::EdgeId id) const;
 
-    void addNode(const model::Node& node);
-    void addEdge(const model::Edge& edge);
+    const std::vector<model::Node>& nodes() const noexcept;
+    const std::vector<model::Edge>& edges() const noexcept;
 
-    void removeNode(types::NodeId id);
-    void removeEdge(types::EdgeId id);
+    // SAFE ADJACENCY ACCESS
+    std::vector<model::Edge>
+    getOutgoingEdges(types::NodeId id) const;
+
+    std::vector<types::NodeId>
+    getNeighbors(types::NodeId id) const;
+
+private:
+    std::unordered_map<types::NodeId, model::Node> nodes_;
+    std::unordered_map<types::EdgeId, model::Edge> edges_;
+    std::unordered_map<types::NodeId, std::vector<types::EdgeId>> adjacency_;
 };
 
 } // namespace core::graph

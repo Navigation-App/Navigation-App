@@ -1,3 +1,9 @@
 #include "MapRenderer.h"
 
-// INTENTIONALLY EMPTY
+#include <QGraphicsScene>
+
+MapRenderer::MapRenderer(QGraphicsScene* scene)
+    : scene(scene)
+{
+    // INTENTIONALLY EMPTY
+}

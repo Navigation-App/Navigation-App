@@ -1,0 +1,2 @@
+/usr/bin/ar qc libcore.a CMakeFiles/core.dir/core/src/Graph.cpp.o CMakeFiles/core.dir/core/src/Node.cpp.o CMakeFiles/core.dir/core/src/Edge.cpp.o CMakeFiles/core.dir/core/src/Route.cpp.o
+/usr/bin/ranlib libcore.a

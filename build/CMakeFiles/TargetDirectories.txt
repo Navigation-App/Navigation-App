@@ -1,0 +1,7 @@
+/home/vardan/DesktopNavigationSystem/build/CMakeFiles/core.dir
+/home/vardan/DesktopNavigationSystem/build/CMakeFiles/algorithms.dir
+/home/vardan/DesktopNavigationSystem/build/CMakeFiles/persistence.dir
+/home/vardan/DesktopNavigationSystem/build/CMakeFiles/ui_app.dir
+/home/vardan/DesktopNavigationSystem/build/CMakeFiles/test.dir
+/home/vardan/DesktopNavigationSystem/build/CMakeFiles/edit_cache.dir
+/home/vardan/DesktopNavigationSystem/build/CMakeFiles/rebuild_cache.dir

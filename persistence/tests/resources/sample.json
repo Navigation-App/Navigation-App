@@ -1,1 +1,31 @@
-{}
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "highway": "primary"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [44.5152, 40.1872],
+          [44.5160, 40.1880]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "highway": "residential"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [44.5160, 40.1880],
+          [44.5170, 40.1890]
+        ]
+      }
+    }
+  ]
+}

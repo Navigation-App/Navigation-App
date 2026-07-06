@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/ui_app.dir/ui/mainwindow/MainWindow.cpp.o CMakeFiles/ui_app.dir/ui/controllers/SceneController.cpp.o CMakeFiles/ui_app.dir/ui/rendering/MapRenderer.cpp.o -o ui_app  libcore.a libalgorithms.a libpersistence.a libcore.a 

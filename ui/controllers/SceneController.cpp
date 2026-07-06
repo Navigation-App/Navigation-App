@@ -1,3 +1,9 @@
 #include "SceneController.h"
 
-// INTENTIONALLY EMPTY
+#include <QGraphicsScene>
+
+SceneController::SceneController(QGraphicsScene* scene)
+    : scene(scene)
+{
+    // EMPTY: no logic yet
+}

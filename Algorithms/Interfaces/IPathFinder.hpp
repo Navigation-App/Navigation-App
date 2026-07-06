@@ -1,17 +1,19 @@
 #pragma once
 
-#include "Types/Route.h"
+#include <memory>
 
-class Graph; // forward declaration
+#include <core/graph/Graph.hpp>
+#include <core/model/Route.hpp>
+#include <core/types/Types.hpp>
 
 class IPathFinder
 {
 public:
     virtual ~IPathFinder() = default;
 
-    virtual Route findPath(
-        const Graph& graph,
-        NodeId source,
-        NodeId destination
-    ) = 0;
+    [[nodiscard]]
+    virtual core::Route findPath(
+        const core::Graph& graph,
+        core::NodeId source,
+        core::NodeId destination) const = 0;
 };

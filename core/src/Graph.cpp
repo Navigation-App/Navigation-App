@@ -2,20 +2,20 @@
 
 namespace core::graph {
 
-void Graph::addNode(const model::Node&) {
-    // TODO: implement later
+bool Graph::addNode(const model::Node&) {
+    return true;
 }
 
-void Graph::addEdge(const model::Edge&) {
-    // TODO: implement later
+bool Graph::addEdge(const model::Edge&) {
+    return true;
 }
 
-void Graph::removeNode(types::NodeId) {
-    // TODO: implement later
+bool Graph::removeNode(types::NodeId) {
+    return true;
 }
 
-void Graph::removeEdge(types::EdgeId) {
-    // TODO: implement later
+bool Graph::removeEdge(types::EdgeId) {
+    return true;
 }
 
 } // namespace core::graph

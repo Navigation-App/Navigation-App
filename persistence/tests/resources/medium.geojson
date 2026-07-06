@@ -1,0 +1,39 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": { "highway": "primary" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [44.51, 40.18],
+          [44.52, 40.18],
+          [44.53, 40.19]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "highway": "secondary" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [44.53, 40.19],
+          [44.54, 40.20]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": { "highway": "residential" },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [44.54, 40.20],
+          [44.55, 40.21]
+        ]
+      }
+    }
+  ]
+}
