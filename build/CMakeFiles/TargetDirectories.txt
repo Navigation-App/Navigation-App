@@ -5,3 +5,5 @@
 /home/vardan/DesktopNavigationSystem/build/CMakeFiles/test.dir
 /home/vardan/DesktopNavigationSystem/build/CMakeFiles/edit_cache.dir
 /home/vardan/DesktopNavigationSystem/build/CMakeFiles/rebuild_cache.dir
+/home/vardan/DesktopNavigationSystem/build/CMakeFiles/ui_app_autogen_timestamp_deps.dir
+/home/vardan/DesktopNavigationSystem/build/CMakeFiles/ui_app_autogen.dir

@@ -12,8 +12,8 @@ public:
     virtual ~IPathFinder() = default;
 
     [[nodiscard]]
-    virtual core::Route findPath(
-        const core::Graph& graph,
-        core::NodeId source,
-        core::NodeId destination) const = 0;
+    virtual core::model::Route findPath(
+        const core::graph::Graph& graph,
+        core::types::NodeId source,
+        core::types::NodeId destination) const = 0;
 };

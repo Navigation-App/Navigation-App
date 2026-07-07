@@ -178,6 +178,32 @@ ui_app/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ui_app.dir/build.make CMakeFiles/ui_app.dir/build
 .PHONY : ui_app/fast
 
+#=============================================================================
+# Target rules for targets named ui_app_autogen_timestamp_deps
+
+# Build rule for target.
+ui_app_autogen_timestamp_deps: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ui_app_autogen_timestamp_deps
+.PHONY : ui_app_autogen_timestamp_deps
+
+# fast build rule for target.
+ui_app_autogen_timestamp_deps/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ui_app_autogen_timestamp_deps.dir/build.make CMakeFiles/ui_app_autogen_timestamp_deps.dir/build
+.PHONY : ui_app_autogen_timestamp_deps/fast
+
+#=============================================================================
+# Target rules for targets named ui_app_autogen
+
+# Build rule for target.
+ui_app_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 ui_app_autogen
+.PHONY : ui_app_autogen
+
+# fast build rule for target.
+ui_app_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ui_app_autogen.dir/build.make CMakeFiles/ui_app_autogen.dir/build
+.PHONY : ui_app_autogen/fast
+
 Algorithms/AStar/AStarPathFinder.o: Algorithms/AStar/AStarPathFinder.cpp.o
 .PHONY : Algorithms/AStar/AStarPathFinder.o
 
@@ -538,6 +564,30 @@ ui/rendering/MapRenderer.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/ui_app.dir/build.make CMakeFiles/ui_app.dir/ui/rendering/MapRenderer.cpp.s
 .PHONY : ui/rendering/MapRenderer.cpp.s
 
+ui_app_autogen/mocs_compilation.o: ui_app_autogen/mocs_compilation.cpp.o
+.PHONY : ui_app_autogen/mocs_compilation.o
+
+# target to build an object file
+ui_app_autogen/mocs_compilation.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ui_app.dir/build.make CMakeFiles/ui_app.dir/ui_app_autogen/mocs_compilation.cpp.o
+.PHONY : ui_app_autogen/mocs_compilation.cpp.o
+
+ui_app_autogen/mocs_compilation.i: ui_app_autogen/mocs_compilation.cpp.i
+.PHONY : ui_app_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+ui_app_autogen/mocs_compilation.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ui_app.dir/build.make CMakeFiles/ui_app.dir/ui_app_autogen/mocs_compilation.cpp.i
+.PHONY : ui_app_autogen/mocs_compilation.cpp.i
+
+ui_app_autogen/mocs_compilation.s: ui_app_autogen/mocs_compilation.cpp.s
+.PHONY : ui_app_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+ui_app_autogen/mocs_compilation.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ui_app.dir/build.make CMakeFiles/ui_app.dir/ui_app_autogen/mocs_compilation.cpp.s
+.PHONY : ui_app_autogen/mocs_compilation.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -547,6 +597,8 @@ help:
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
 	@echo "... test"
+	@echo "... ui_app_autogen"
+	@echo "... ui_app_autogen_timestamp_deps"
 	@echo "... algorithms"
 	@echo "... core"
 	@echo "... persistence"
@@ -596,6 +648,9 @@ help:
 	@echo "... ui/rendering/MapRenderer.o"
 	@echo "... ui/rendering/MapRenderer.i"
 	@echo "... ui/rendering/MapRenderer.s"
+	@echo "... ui_app_autogen/mocs_compilation.o"
+	@echo "... ui_app_autogen/mocs_compilation.i"
+	@echo "... ui_app_autogen/mocs_compilation.s"
 .PHONY : help
 
 

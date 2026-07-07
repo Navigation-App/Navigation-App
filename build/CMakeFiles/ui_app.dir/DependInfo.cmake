@@ -8,9 +8,11 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "" "ui_app_autogen/timestamp" "custom" "ui_app_autogen/deps"
   "/home/vardan/DesktopNavigationSystem/ui/controllers/SceneController.cpp" "CMakeFiles/ui_app.dir/ui/controllers/SceneController.cpp.o" "gcc" "CMakeFiles/ui_app.dir/ui/controllers/SceneController.cpp.o.d"
   "/home/vardan/DesktopNavigationSystem/ui/mainwindow/MainWindow.cpp" "CMakeFiles/ui_app.dir/ui/mainwindow/MainWindow.cpp.o" "gcc" "CMakeFiles/ui_app.dir/ui/mainwindow/MainWindow.cpp.o.d"
   "/home/vardan/DesktopNavigationSystem/ui/rendering/MapRenderer.cpp" "CMakeFiles/ui_app.dir/ui/rendering/MapRenderer.cpp.o" "gcc" "CMakeFiles/ui_app.dir/ui/rendering/MapRenderer.cpp.o.d"
+  "/home/vardan/DesktopNavigationSystem/build/ui_app_autogen/mocs_compilation.cpp" "CMakeFiles/ui_app.dir/ui_app_autogen/mocs_compilation.cpp.o" "gcc" "CMakeFiles/ui_app.dir/ui_app_autogen/mocs_compilation.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

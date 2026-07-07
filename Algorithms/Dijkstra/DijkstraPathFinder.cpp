@@ -2,114 +2,141 @@
 
 #include <queue>
 #include <unordered_map>
+#include <unordered_set>
 #include <vector>
+#include <algorithm>
 #include <limits>
 
-#include <core/model/Route.hpp>
 #include <core/graph/Graph.hpp>
-#include <core/model/Edge.hpp>
+#include <core/model/Route.hpp>
 
-using Cost = double;
+
+namespace
+{
+
+using NodeId = core::types::NodeId;
+using Cost  = core::types::Weight;
+
 
 struct NodeState
 {
-    core::NodeId node;
+    NodeId node;
     Cost cost;
+
+    NodeState(
+        NodeId id,
+        Cost distance
+    )
+        :
+        node(id),
+        cost(distance)
+    {
+    }
 
     bool operator>(const NodeState& other) const
     {
+        if (cost == other.cost)
+        {
+            return node > other.node;
+        }
+
         return cost > other.cost;
     }
 };
 
-core::model::Route DijkstraPathFinder::findPath(
+}
+
+
+core::model::Route
+DijkstraPathFinder::findPath(
     const core::graph::Graph& graph,
-    core::NodeId source,
-    core::NodeId destination) const
+    NodeId source,
+    NodeId destination
+) const
 {
-    core::model::Route result;
+    constexpr Cost INF =
+        std::numeric_limits<Cost>::infinity();
 
-    // Edge case: same node
-    if (source == destination)
-    {
-        result.nodes = {source};
-        result.totalDistance = 0.0;
-        return result;
-    }
-
-    constexpr Cost INF = std::numeric_limits<Cost>::infinity();
 
     std::priority_queue<
         NodeState,
         std::vector<NodeState>,
         std::greater<NodeState>
-    > pq;
+    > queue;
 
-    std::unordered_map<core::NodeId, Cost> dist;
-    std::unordered_map<core::NodeId, core::NodeId> parent;
+    std::unordered_map<NodeId, Cost> distance;
 
-    // Initialization
-    dist[source] = 0.0;
-    pq.push({source, 0.0});
+    std::unordered_map<NodeId, NodeId> parent;
 
-    while (!pq.empty())
+    std::unordered_set<NodeId> visited;
+
+    distance[source] = 0;
+
+    queue.emplace(source, 0);
+
+    while (!queue.empty())
     {
-        auto [current, currentCost] = pq.top();
-        pq.pop();
+        const NodeState current = queue.top();
 
-        // Skip outdated entries
-        if (currentCost > dist[current])
-            continue;
+        queue.pop();
 
-        // Early exit
-        if (current == destination)
-            break;
+        if (visited.contains(current.node)) continue;
 
-        // Read-only adjacency access
-        const auto& neighbors = graph.getNeighbors(current);
+        visited.insert(current.node);
 
-        for (const auto& edge : neighbors)
+        if (current.node == destination) break;
+
+        const auto outgoingEdges = graph.getOutgoingEdges(current.node);
+
+        for (const auto& edge : outgoingEdges)
         {
-            core::NodeId next = edge.to;
-            Cost weight = edge.weight;
+            NodeId next = edge.to();
 
-            Cost newCost = currentCost + weight;
+            Cost weight = edge.weight();
 
-            if (!dist.count(next) || newCost < dist[next])
+            Cost newDistance = distance[current.node] + weight;
+
+            auto existing = distance.find(next);
+
+            if (existing == distance.end() || newDistance < existing->second)
             {
-                dist[next] = newCost;
-                parent[next] = current;
-                pq.push({next, newCost});
+                distance[next] = newDistance;
+
+                parent[next] = current.node;
+
+                queue.emplace(next, newDistance);
             }
         }
     }
 
-    // No path found
-    if (!dist.count(destination))
+    if (!distance.contains(destination))
     {
-        result.nodes.clear();
-        result.totalDistance = INF;
-        return result;
+        return core::model::Route{};
     }
 
-    // Reconstruct path
-    std::vector<core::NodeId> path;
-    core::NodeId current = destination;
+    core::model::Route::Path path;
+
+    NodeId current = destination;
 
     while (true)
     {
         path.push_back(current);
 
-        if (current == source)
-            break;
+        if (current == source) break;
 
-        current = parent[current];
+        auto parentIt = parent.find(current);
+
+
+        if (parentIt == parent.end())
+        {
+            return core::model::Route{};
+        }
+
+        current = parentIt->second;
     }
 
     std::reverse(path.begin(), path.end());
 
-    result.nodes = std::move(path);
-    result.totalDistance = dist[destination];
 
-    return result;
+    return core::model::Route(std::move(path));
 }

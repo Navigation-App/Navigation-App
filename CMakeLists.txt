@@ -46,13 +46,28 @@ target_include_directories(persistence PUBLIC
 target_link_libraries(persistence core)
 
 # ---------------- UI (optional build) ----------------
+find_package(Qt6 REQUIRED COMPONENTS Widgets)
+
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTORCC ON)
+
 add_executable(ui_app
     ui/mainwindow/MainWindow.cpp
+    ui/mainwindow/MainWindow.h
     ui/controllers/SceneController.cpp
+    ui/controllers/SceneController.h
     ui/rendering/MapRenderer.cpp
+    ui/rendering/MapRenderer.h
 )
 
-target_link_libraries(ui_app core algorithms persistence)
+target_link_libraries(ui_app
+    PRIVATE
+    core
+    algorithms
+    persistence
+    Qt6::Widgets
+)
 
 # ---------------- TEST (optional) ----------------
 enable_testing()
