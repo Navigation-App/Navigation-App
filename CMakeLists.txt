@@ -52,6 +52,8 @@ add_library(application
     application/src/NavigationService.cpp
     application/src/GraphLoader.cpp
     application/src/RoutePresentationBuilder.cpp
+    application/src/ApplicationBootstrap.cpp
+    application/src/RuntimeGeometryProvider.cpp
 )
 
 target_include_directories(application PUBLIC
@@ -81,6 +83,9 @@ add_executable(ui_app
     ui/controllers/SceneController.cpp
     ui/controllers/SceneController.h
 
+    ui/controllers/NavigationController.cpp
+    ui/controllers/NavigationController.hpp
+
     ui/rendering/MapRenderer.cpp
     ui/rendering/MapRenderer.h
 )
@@ -88,6 +93,7 @@ add_executable(ui_app
 target_link_libraries(ui_app
     PRIVATE
     core
+    application
     algorithms
     persistence
     Qt6::Widgets

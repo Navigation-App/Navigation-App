@@ -1,4 +1,6 @@
 file(REMOVE_RECURSE
+  "CMakeFiles/application.dir/application/src/ApplicationBootstrap.cpp.o"
+  "CMakeFiles/application.dir/application/src/ApplicationBootstrap.cpp.o.d"
   "CMakeFiles/application.dir/application/src/ApplicationTypes.cpp.o"
   "CMakeFiles/application.dir/application/src/ApplicationTypes.cpp.o.d"
   "CMakeFiles/application.dir/application/src/GraphLoader.cpp.o"
@@ -7,6 +9,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/application.dir/application/src/NavigationService.cpp.o.d"
   "CMakeFiles/application.dir/application/src/RoutePresentationBuilder.cpp.o"
   "CMakeFiles/application.dir/application/src/RoutePresentationBuilder.cpp.o.d"
+  "CMakeFiles/application.dir/application/src/RuntimeGeometryProvider.cpp.o"
+  "CMakeFiles/application.dir/application/src/RuntimeGeometryProvider.cpp.o.d"
   "libapplication.a"
   "libapplication.pdb"
 )

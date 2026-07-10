@@ -66,6 +66,7 @@ include CMakeFiles/ui_app_autogen_timestamp_deps.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/ui_app_autogen_timestamp_deps.dir/progress.make
 
+CMakeFiles/ui_app_autogen_timestamp_deps: libapplication.a
 CMakeFiles/ui_app_autogen_timestamp_deps: libalgorithms.a
 CMakeFiles/ui_app_autogen_timestamp_deps: libpersistence.a
 CMakeFiles/ui_app_autogen_timestamp_deps: libcore.a

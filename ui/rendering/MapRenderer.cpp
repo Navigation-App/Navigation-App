@@ -1,9 +1,34 @@
 #include "MapRenderer.h"
 
-#include <QGraphicsScene>
+#include <application/RoutePresentationData.hpp>
 
-MapRenderer::MapRenderer(QGraphicsScene* scene)
-    : scene(scene)
+
+MapRenderer::MapRenderer(
+    QGraphicsScene* scene
+)
+    :
+    scene(scene)
 {
-    // INTENTIONALLY EMPTY
+}
+
+
+void MapRenderer::renderRoute(
+    const application::RoutePresentationData& route
+)
+{
+    Q_UNUSED(route);
+
+    if(!scene)
+        return;
+
+    scene->update();
+}
+
+
+void MapRenderer::clearRoute()
+{
+    if(!scene)
+        return;
+
+    scene->clear();
 }

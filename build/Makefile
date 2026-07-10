@@ -328,6 +328,30 @@ Algorithms/Factory/PathFinderFactory.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/algorithms.dir/build.make CMakeFiles/algorithms.dir/Algorithms/Factory/PathFinderFactory.cpp.s
 .PHONY : Algorithms/Factory/PathFinderFactory.cpp.s
 
+application/src/ApplicationBootstrap.o: application/src/ApplicationBootstrap.cpp.o
+.PHONY : application/src/ApplicationBootstrap.o
+
+# target to build an object file
+application/src/ApplicationBootstrap.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/application.dir/build.make CMakeFiles/application.dir/application/src/ApplicationBootstrap.cpp.o
+.PHONY : application/src/ApplicationBootstrap.cpp.o
+
+application/src/ApplicationBootstrap.i: application/src/ApplicationBootstrap.cpp.i
+.PHONY : application/src/ApplicationBootstrap.i
+
+# target to preprocess a source file
+application/src/ApplicationBootstrap.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/application.dir/build.make CMakeFiles/application.dir/application/src/ApplicationBootstrap.cpp.i
+.PHONY : application/src/ApplicationBootstrap.cpp.i
+
+application/src/ApplicationBootstrap.s: application/src/ApplicationBootstrap.cpp.s
+.PHONY : application/src/ApplicationBootstrap.s
+
+# target to generate assembly for a file
+application/src/ApplicationBootstrap.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/application.dir/build.make CMakeFiles/application.dir/application/src/ApplicationBootstrap.cpp.s
+.PHONY : application/src/ApplicationBootstrap.cpp.s
+
 application/src/ApplicationTypes.o: application/src/ApplicationTypes.cpp.o
 .PHONY : application/src/ApplicationTypes.o
 
@@ -423,6 +447,30 @@ application/src/RoutePresentationBuilder.s: application/src/RoutePresentationBui
 application/src/RoutePresentationBuilder.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/application.dir/build.make CMakeFiles/application.dir/application/src/RoutePresentationBuilder.cpp.s
 .PHONY : application/src/RoutePresentationBuilder.cpp.s
+
+application/src/RuntimeGeometryProvider.o: application/src/RuntimeGeometryProvider.cpp.o
+.PHONY : application/src/RuntimeGeometryProvider.o
+
+# target to build an object file
+application/src/RuntimeGeometryProvider.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/application.dir/build.make CMakeFiles/application.dir/application/src/RuntimeGeometryProvider.cpp.o
+.PHONY : application/src/RuntimeGeometryProvider.cpp.o
+
+application/src/RuntimeGeometryProvider.i: application/src/RuntimeGeometryProvider.cpp.i
+.PHONY : application/src/RuntimeGeometryProvider.i
+
+# target to preprocess a source file
+application/src/RuntimeGeometryProvider.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/application.dir/build.make CMakeFiles/application.dir/application/src/RuntimeGeometryProvider.cpp.i
+.PHONY : application/src/RuntimeGeometryProvider.cpp.i
+
+application/src/RuntimeGeometryProvider.s: application/src/RuntimeGeometryProvider.cpp.s
+.PHONY : application/src/RuntimeGeometryProvider.s
+
+# target to generate assembly for a file
+application/src/RuntimeGeometryProvider.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/application.dir/build.make CMakeFiles/application.dir/application/src/RuntimeGeometryProvider.cpp.s
+.PHONY : application/src/RuntimeGeometryProvider.cpp.s
 
 core/src/Edge.o: core/src/Edge.cpp.o
 .PHONY : core/src/Edge.o
@@ -640,6 +688,30 @@ persistence/src/RoadFeatureExtractor.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/persistence.dir/build.make CMakeFiles/persistence.dir/persistence/src/RoadFeatureExtractor.cpp.s
 .PHONY : persistence/src/RoadFeatureExtractor.cpp.s
 
+ui/controllers/NavigationController.o: ui/controllers/NavigationController.cpp.o
+.PHONY : ui/controllers/NavigationController.o
+
+# target to build an object file
+ui/controllers/NavigationController.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ui_app.dir/build.make CMakeFiles/ui_app.dir/ui/controllers/NavigationController.cpp.o
+.PHONY : ui/controllers/NavigationController.cpp.o
+
+ui/controllers/NavigationController.i: ui/controllers/NavigationController.cpp.i
+.PHONY : ui/controllers/NavigationController.i
+
+# target to preprocess a source file
+ui/controllers/NavigationController.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ui_app.dir/build.make CMakeFiles/ui_app.dir/ui/controllers/NavigationController.cpp.i
+.PHONY : ui/controllers/NavigationController.cpp.i
+
+ui/controllers/NavigationController.s: ui/controllers/NavigationController.cpp.s
+.PHONY : ui/controllers/NavigationController.s
+
+# target to generate assembly for a file
+ui/controllers/NavigationController.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/ui_app.dir/build.make CMakeFiles/ui_app.dir/ui/controllers/NavigationController.cpp.s
+.PHONY : ui/controllers/NavigationController.cpp.s
+
 ui/controllers/SceneController.o: ui/controllers/SceneController.cpp.o
 .PHONY : ui/controllers/SceneController.o
 
@@ -788,6 +860,9 @@ help:
 	@echo "... Algorithms/Factory/PathFinderFactory.o"
 	@echo "... Algorithms/Factory/PathFinderFactory.i"
 	@echo "... Algorithms/Factory/PathFinderFactory.s"
+	@echo "... application/src/ApplicationBootstrap.o"
+	@echo "... application/src/ApplicationBootstrap.i"
+	@echo "... application/src/ApplicationBootstrap.s"
 	@echo "... application/src/ApplicationTypes.o"
 	@echo "... application/src/ApplicationTypes.i"
 	@echo "... application/src/ApplicationTypes.s"
@@ -800,6 +875,9 @@ help:
 	@echo "... application/src/RoutePresentationBuilder.o"
 	@echo "... application/src/RoutePresentationBuilder.i"
 	@echo "... application/src/RoutePresentationBuilder.s"
+	@echo "... application/src/RuntimeGeometryProvider.o"
+	@echo "... application/src/RuntimeGeometryProvider.i"
+	@echo "... application/src/RuntimeGeometryProvider.s"
 	@echo "... core/src/Edge.o"
 	@echo "... core/src/Edge.i"
 	@echo "... core/src/Edge.s"
@@ -827,6 +905,9 @@ help:
 	@echo "... persistence/src/RoadFeatureExtractor.o"
 	@echo "... persistence/src/RoadFeatureExtractor.i"
 	@echo "... persistence/src/RoadFeatureExtractor.s"
+	@echo "... ui/controllers/NavigationController.o"
+	@echo "... ui/controllers/NavigationController.i"
+	@echo "... ui/controllers/NavigationController.s"
 	@echo "... ui/controllers/SceneController.o"
 	@echo "... ui/controllers/SceneController.i"
 	@echo "... ui/controllers/SceneController.s"

@@ -1,34 +1,93 @@
 #include "MainWindow.h"
 
-#include <QGraphicsView>
-#include <QGraphicsScene>
-
 #include "../controllers/SceneController.h"
+#include "../controllers/NavigationController.hpp"
 #include "../rendering/MapRenderer.h"
 
-MainWindow::MainWindow(QWidget* parent)
-    : QMainWindow(parent)
+#include <application/NavigationService.hpp>
+#include <application/RoutePresentationData.hpp>
+
+#include <QGraphicsScene>
+#include <QGraphicsView>
+#include <QStatusBar>
+
+
+MainWindow::MainWindow(
+    application::NavigationService& navigationService,
+    QWidget* parent
+)
+    :
+    QMainWindow(parent),
+    scene(nullptr),
+    graphicsView(nullptr),
+    sceneController(nullptr),
+    navigationController(nullptr),
+    mapRenderer(nullptr)
 {
-    setupUi();
-    setupScene();
+    scene =
+        new QGraphicsScene(this);
+
+
+    graphicsView =
+        new QGraphicsView(this);
+
+    graphicsView->setScene(scene);
+
+
+    sceneController =
+        new SceneController(scene);
+
+
+    mapRenderer =
+        new MapRenderer(scene);
+
+
+    navigationController =
+        new NavigationController(
+            navigationService,
+            this
+        );
+
+
+    connect(
+        navigationController,
+        &NavigationController::routeReady,
+        this,
+        [this](
+            const application::RoutePresentationData& route
+        )
+        {
+            mapRenderer->renderRoute(route);
+        }
+    );
+
+
+    connect(
+        navigationController,
+        &NavigationController::navigationFailed,
+        this,
+        &MainWindow::onNavigationFailed
+    );
+
+
+    setCentralWidget(
+        graphicsView
+    );
 }
 
-MainWindow::~MainWindow() = default;
 
-void MainWindow::setupUi()
+void MainWindow::onNavigationFailed(
+    const QString& message
+)
 {
-    view = new QGraphicsView(this);
-    setCentralWidget(view);
+    statusBar()->showMessage(
+        message
+    );
 }
 
-void MainWindow::setupScene()
+void MainWindow::onRouteReady(
+    const application::RoutePresentationData& route
+)
 {
-    scene = new QGraphicsScene(this);
-    view->setScene(scene);
-
-    // Empty canvas ONLY
-    scene->setSceneRect(-500, -500, 1000, 1000);
-
-    sceneController = new SceneController(scene);
-    renderer = new MapRenderer(scene);
+    mapRenderer->renderRoute(route);
 }

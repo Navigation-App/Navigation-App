@@ -1,16 +1,31 @@
 #pragma once
 
-class QGraphicsScene;
+#include <QGraphicsScene>
+
+namespace application
+{
+class RoutePresentationData;
+}
+
 
 class MapRenderer
 {
 public:
-    explicit MapRenderer(QGraphicsScene* scene);
-    ~MapRenderer() = default;
 
-    MapRenderer(const MapRenderer&) = delete;
-    MapRenderer& operator=(const MapRenderer&) = delete;
+    explicit MapRenderer(
+        QGraphicsScene* scene
+    );
+
+
+    void renderRoute(
+        const application::RoutePresentationData& route
+    );
+
+
+    void clearRoute();
+
 
 private:
-    QGraphicsScene* scene = nullptr;
+
+    QGraphicsScene* scene;
 };

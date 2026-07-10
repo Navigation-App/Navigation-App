@@ -8,10 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/vardan/DesktopNavigationSystem/application/src/ApplicationBootstrap.cpp" "CMakeFiles/application.dir/application/src/ApplicationBootstrap.cpp.o" "gcc" "CMakeFiles/application.dir/application/src/ApplicationBootstrap.cpp.o.d"
   "/home/vardan/DesktopNavigationSystem/application/src/ApplicationTypes.cpp" "CMakeFiles/application.dir/application/src/ApplicationTypes.cpp.o" "gcc" "CMakeFiles/application.dir/application/src/ApplicationTypes.cpp.o.d"
   "/home/vardan/DesktopNavigationSystem/application/src/GraphLoader.cpp" "CMakeFiles/application.dir/application/src/GraphLoader.cpp.o" "gcc" "CMakeFiles/application.dir/application/src/GraphLoader.cpp.o.d"
   "/home/vardan/DesktopNavigationSystem/application/src/NavigationService.cpp" "CMakeFiles/application.dir/application/src/NavigationService.cpp.o" "gcc" "CMakeFiles/application.dir/application/src/NavigationService.cpp.o.d"
   "/home/vardan/DesktopNavigationSystem/application/src/RoutePresentationBuilder.cpp" "CMakeFiles/application.dir/application/src/RoutePresentationBuilder.cpp.o" "gcc" "CMakeFiles/application.dir/application/src/RoutePresentationBuilder.cpp.o.d"
+  "/home/vardan/DesktopNavigationSystem/application/src/RuntimeGeometryProvider.cpp" "CMakeFiles/application.dir/application/src/RuntimeGeometryProvider.cpp.o" "gcc" "CMakeFiles/application.dir/application/src/RuntimeGeometryProvider.cpp.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

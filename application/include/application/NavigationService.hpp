@@ -5,21 +5,16 @@
 #include "application/NavigationResponse.hpp"
 #include "application/INodeGeometryProvider.hpp"
 
-#include <vector>
-#include <unordered_map>
-
-#include "core/graph/Graph.hpp"
-#include "core/types/Types.hpp"
+#include <core/graph/Graph.hpp>
+#include <core/types/Types.hpp>
 
 #include "Interfaces/IPathFinder.hpp"
-
 
 namespace application
 {
 
 class NavigationService
 {
-
 public:
 
     NavigationService(
@@ -28,12 +23,10 @@ public:
         const INodeGeometryProvider& geometryProvider
     );
 
-
     NavigationResponse calculateRoute(
         core::types::NodeId start,
         core::types::NodeId destination
     );
-
 
 private:
 
@@ -42,8 +35,6 @@ private:
     std::unique_ptr<IPathFinder> pathFinder_;
 
     const INodeGeometryProvider& geometryProvider_;
-
 };
-
 
 }

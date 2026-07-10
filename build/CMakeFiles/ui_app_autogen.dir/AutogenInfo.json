@@ -247,6 +247,12 @@
 	"HEADERS" : 
 	[
 		[
+			"/home/vardan/DesktopNavigationSystem/ui/controllers/NavigationController.hpp",
+			"MU",
+			"LGPZVGMTGO/moc_NavigationController.cpp",
+			null
+		],
+		[
 			"/home/vardan/DesktopNavigationSystem/ui/controllers/SceneController.h",
 			"MU",
 			"LGPZVGMTGO/moc_SceneController.cpp",
@@ -279,6 +285,7 @@
 	"MOC_INCLUDES" : 
 	[
 		"/home/vardan/DesktopNavigationSystem/core/include",
+		"/home/vardan/DesktopNavigationSystem/application/include",
 		"/home/vardan/DesktopNavigationSystem/Algorithms",
 		"/home/vardan/DesktopNavigationSystem/persistence/include",
 		"/usr/include/x86_64-linux-gnu/qt6/QtWidgets",
@@ -326,6 +333,11 @@
 	"SETTINGS_FILE" : "/home/vardan/DesktopNavigationSystem/build/CMakeFiles/ui_app_autogen.dir/AutogenUsed.txt",
 	"SOURCES" : 
 	[
+		[
+			"/home/vardan/DesktopNavigationSystem/ui/controllers/NavigationController.cpp",
+			"MU",
+			null
+		],
 		[
 			"/home/vardan/DesktopNavigationSystem/ui/controllers/SceneController.cpp",
 			"MU",

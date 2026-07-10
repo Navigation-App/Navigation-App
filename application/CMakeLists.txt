@@ -3,6 +3,7 @@ add_library(application
     src/GraphLoader.cpp
     src/ApplicationTypes.cpp
     src/RoutePresentationBuilder.cpp
+    src/ApplicationBootstrap.cpp
 )
 
 target_include_directories(application PUBLIC
